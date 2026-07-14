@@ -1,22 +1,70 @@
+<head>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
 <body>
 
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <h1>Flipkart</h1>
+        </a>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search for products, brands and more">
+        <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+</header>
+
 <div class="login-container">
-    <div class="login-box">
+
+    <div class="login-card">
+
         <h1>Sign In</h1>
 
-        <label>Email</label>
-        <input type="email" placeholder="Enter your email">
-
-        <label>Password</label>
-        <input type="password" placeholder="Enter your password">
-
-        <button>Login</button>
-
-        <p>
-            New Customer?
-            <a href="register.html">Create your Account</a>
+        <p class="login-text">
+            Welcome Back! Sign in to continue shopping.
         </p>
+
+        <form>
+
+            <label>Email</label>
+
+            <input type="email"
+                placeholder="Enter your email"
+                required>
+
+            <label>Password</label>
+
+            <input type="password"
+                placeholder="Enter your password"
+                required>
+
+            <a href="#" class="forgot-password">
+                Forgot Password?
+            </a>
+
+            <button type="submit" class="login-submit">
+                Sign In
+            </button>
+
+        </form>
+
+        <p class="register-link">
+
+            New Customer?
+
+            <a href="register.html">
+                Create your Account
+            </a>
+
+        </p>
+
     </div>
+
 </div>
 
 </body>
