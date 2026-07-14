@@ -1,274 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flipkart Clone</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
+<header>
 
-        <div class="logo">
-            <h1>Flipkart</h1>
-        </div>
+    <div class="logo">
+        <h1>Flipkart</h1>
+    </div>
 
-        <div class="search-bar">
-            <input type="text" placeholder="Search for products, brands and more">
-            <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for products, brands and more">
 
-        <div class="header-links">
+        <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
 
-            <button>Login</button>
+    <div class="header-links">
 
-            <button>
-                <i class="fa-solid fa-cart-shopping"></i>
-                Cart
-            </button>
-
-            <div class="more-menu">
-
-                <button class="more-btn">
-                    More
+        <div class="account-menu">
+            <button class="account-btn">
+                <span class="small-text">hello, Sign in</span>
+                <br>
+                <span class = "big-text">Account & Lists 
                     <i class="fa-solid fa-caret-down"></i>
+                </span>
+            </button>
+            <div class="account-dropdown">
+                <a href="login.html" class="signin-btn">Sign In</a>
+                <p class="new-customer">
+                        New Customer?
+                    <a href="register.html">Start here.</a>
+               </p>
+                <hr>
+                <h3>Your Account</h3>
+                <ul>
+                    <li>
+                        <a href="#">Your Account</a>
+                    </li>
+                    <li>
+                        <a href="#">Your Orders</a>
+                    </li>
+                    <li>
+                        <a href="#">Your Wishlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Prime Membership</a>
+                    </li>
+                    <li>
+                        <a href="#">Manage Device</a>
+                    </li>
+                </ul>
+
+            </div>
+                
+
+        </div>
+
+        <button class="cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart
+            <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <div class="purchased-menu">
+            <button class="purchased-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                Purchased
+                <span id="purchaseCount">0</span>
+            </button>
+            <div class="purchased-dropdown">
+                <h3>Purchased Product</h3>
+                <div id="purchaseList">
+                    <p>NO Products Purchased</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#">Become a Seller</a>
+
+        <div class="more-menu">
+
+            <button class="more-btn">
+                More
+                <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <div class="more-dropdown">
+                <ul>
+                    <li><a href="#">Notification Preferences</a></li>
+                    <li><a href="#">24x7 Customer Care</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Download App</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <button class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+
+<nav>
+
+    <ul class="nav-list">
+
+        <li class="nav-item">
+            <img src="images/electronics.png" alt="Electronics">
+            <span>Electronics</span>
+        </li>
+
+        <li class="nav-item">
+            <img src="images/fashion.png" alt="Fashion">
+            <span>Fashion</span>
+        </li>
+
+        <li class="nav-item">
+            <img src="images/furniture.png" alt="Furniture">
+            <span>Home & Furniture</span>
+        </li>
+
+        <li class="nav-item">
+            <img src="images/appliances.png" alt="Appliances">
+            <span>Appliances</span>
+        </li>
+
+        <li class="nav-item">
+            <img src="images/beauty.png" alt="Beauty">
+            <span>Beauty</span>
+        </li>
+
+        <li class="nav-item">
+            <img src="images/toys.png" alt="Toys">
+            <span>Toys</span>
+        </li>
+
+        <li class="nav-item">
+            <img src="images/grocery.png" alt="Grocery">
+            <span>Grocery</span>
+        </li>
+
+        <li class="nav-item">
+            <img src="images/mobiles.png" alt="Mobiles">
+            <span>Mobiles</span>
+        </li>
+
+    </ul>
+
+</nav>
+
+<main>
+
+<section class="hero">
+
+    <button class="prev">&#10094;</button>
+
+    <div class="slider">
+
+        <div class="slide active">
+            <img src="images/banner1.jpg" alt="Banner 1">
+        </div>
+
+        <div class="slide">
+            <img src="images/banner2.jpg" alt="Banner 2">
+        </div>
+
+        <div class="slide">
+            <img src="images/banner3.jpg" alt="Banner 3">
+        </div>
+
+    </div>
+
+    <button class="next">&#10095;</button>
+
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+</section>
+<section class="products">
+
+    <h2>Best Deals</h2>
+
+    <div class="product-container">
+
+        <div class="product-card">
+            <img src="images/product1.png" alt="Wireless Headphones">
+            <h3>Wireless Headphones</h3>
+            <p>From ₹2,499</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product2.png" alt="Smart Watch">
+            <h3>Smart Watch</h3>
+            <p>From ₹4,999</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product3.png" alt="Gaming Mouse">
+            <h3>Gaming Mouse</h3>
+            <p>From ₹999</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product4.png" alt="Power Bank">
+            <h3>Power Bank</h3>
+            <p>Up to 40% Off</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product5.png" alt="USB Keyboard">
+            <h3>USB Keyboard</h3>
+            <p>From ₹699</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="products">
+
+    <h2>Fashion Top Offers</h2>
+
+    <div class="product-container">
+
+        <div class="product-card">
+            <img src="images/product6.png" alt="Laptop Backpack">
+            <h3>Laptop Backpack</h3>
+            <p>From ₹899</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product7.png" alt="Wireless Earbuds">
+            <h3>Wireless Earbuds</h3>
+            <p>Up to 50% Off</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product8.png" alt="Bluetooth Speaker">
+            <h3>Bluetooth Speaker</h3>
+            <p>From ₹1,999</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product1.png" alt="Wireless Headphones">
+            <h3>Wireless Headphones</h3>
+            <p>Best Seller</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/product2.png" alt="Smart Watch">
+            <h3>Smart Watch</h3>
+            <p>Limited Offer</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="featured-products">
+
+    <h2>Featured Products</h2>
+
+    <div class="product-grid">
+
+        <div class="featured-card">
+            <img src="images/product1.png" alt="Wireless Headphones">
+           <h3>Wireless Headphones</h3>
+            <p class="price">₹2,499 <span>₹3,999</span></p>
+            <p class="discount">37% OFF</p>
+            <p class="rating">⭐⭐⭐⭐☆ (4.5)</p>
+            <div class="product-buttons">
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+                <button class="buy-now">
+                    Buy Now
+                </button>
+            </div>
+            <div class="buy-quantity">
+                
+                <button class="minus">
+                    -
+                </button>
+                <span class="qty">
+                    1
+                </span>
+                <button class="plus">
+                    +
+                </button>
+            </div>
+            <a href="product-details.html?id=0" class="view-details">
+                View Details →
+            </a>
+
+        </div>
+
+        <div class="featured-card">
+            <img src="images/product2.png" alt="Smart Watch">
+            
+            <h3>Smart Watch</h3>
+            <p class="price">₹4,999 <span>₹6,999</span></p>
+            <p class="discount">29% OFF</p>
+            <p class="rating">⭐⭐⭐⭐☆ (4.3)</p>
+            <div class="product-buttons">
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+                <button class="buy-now">
+                    Buy Now
+                </button>
+            </div>
+            <div class="buy-quantity">
+                <button class="minus">
+                    -
+                </button>
+                <span class="qty">
+                    1
+                </span>
+                <button class="plus">
+                    +
                 </button>
 
-                <div class="more-dropdown">
-                    <ul>
-                        <li><a href="#">Notification Preferences</a></li>
-                        <li><a href="#">Sell on Flipkart</a></li>
-                        <li><a href="#">24x7 Customer Care</a></li>
-                        <li><a href="#">Advertise</a></li>
-                        <li><a href="#">Download App</a></li>
-                    </ul>
-                </div>
+            </div>    
+            <a href="product-details.html?id=1" class="view-details">
+                View Details →
+            </a>
 
-            </div>
-
+            
         </div>
 
-        <button class="menu-button">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-    </header>
-
-    <!-- Categories -->
-
-    <nav>
-
-        <ul class="nav-list">
-
-            <li class="nav-item">
-                <img src="images/electronics.avif" alt="Electronics">
-                <span>Electronics</span>
-            </li>
-
-            <li class="nav-item">
-                <img src="images/fashion.jpg" alt="Fashion">
-                <span>Fashion</span>
-            </li>
-
-            <li class="nav-item">
-                <img src="images/furniture.avif" alt="Furniture">
-                <span>Furniture</span>
-            </li>
-
-            <li class="nav-item">
-                <img src="images/appliances.webp" alt="Appliances">
-                <span>Appliances</span>
-            </li>
-
-            <li class="nav-item">
-                <img src="images/beauty.jpeg" alt="Beauty">
-                <span>Beauty</span>
-            </li>
-
-            <li class="nav-item">
-                <img src="images/toys.webp" alt="Toys">
-                <span>Toys</span>
-            </li>
-
-            <li class="nav-item">
-                <img src="images/grocery.jpeg" alt="Grocery">
-                <span>Grocery</span>
-            </li>
-
-            <li class="nav-item">
-                <img src="images/mobiles.jpeg" alt="Mobiles">
-                <span>Mobiles</span>
-            </li>
-
-        </ul>
-
-    </nav>
-
-    <!-- Slider -->
-
-    <section class="hero">
-
-        <button class="prev">&#10094;</button>
-
-        <div class="slider">
-
-            <div class="slide active">
-                <img src="images/banner1.jpg" alt="Banner 1">
+        <div class="featured-card">
+            <img src="images/product3.png" alt="Gaming Mouse">
+            <h3>Gaming Mouse</h3>
+            <p class="price">₹999 <span>₹1,499</span></p>
+            <p class="discount">33% OFF</p>
+            <p class="rating">⭐⭐⭐⭐☆ (4.2)</p>
+            <div class="product-buttons">
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+                <button class="buy-now">
+                    Buy Now
+                </button>
             </div>
+            <div class="buy-quantity">
+                <button class="minus">
+                    -
+                </button>
+                <span class="qty">
+                    1
+                </span>
+                <button class="plus">+</button>
+            </div>    
+            <a href="product-details.html?id=2" class="view-details">
+                View Details →
+            </a>
 
-            <div class="slide">
-                <img src="images/banner2.jpg" alt="Banner 2">
-            </div>
-
-            <div class="slide">
-                <img src="images/banner3.jpg" alt="Banner 3">
-            </div>
-
+            
         </div>
 
-        <button class="next">&#10095;</button>
-
-        <div class="dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+        <div class="featured-card">
+            <img src="images/product4.png" alt="Power Bank">
+            <h3>Power Bank</h3>
+            <p class="price">₹1,299 <span>₹1,899</span></p>
+            <p class="discount">32% OFF</p>
+            <p class="rating">⭐⭐⭐⭐☆ (4.4)</p>
+            <div class="product-buttons">
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+                <button class="buy-now">
+                    Buy Now
+                </button>
+            </div>
+            <div class="buy-quantity">
+                <button class="minus">
+                    -
+                </button>
+                <span class="qty">
+                    1
+                </span>
+                <button class="plus">+</button>
+            </div>
+            <a href="product-details.html?id=3" class="view-details">
+                View Details →
+            </a>
+            
         </div>
 
-    </section>
-
-    <!-- Best Deals -->
-
-    <section class="products">
-
-        <h2>Best Deals</h2>
-
-        <div class="product-container">
-
-            <div class="product-card">
-                <img src="images/electronics.avif" alt="Smart Phone">
-                <h3>Smart Phone</h3>
-                <p>From ₹14,999</p>
+        <div class="featured-card">
+            <img src="images/product5.png" alt="USB Keyboard">
+            <h3>USB Keyboard</h3>
+            <p class="price">₹799 <span>₹1,199</span></p>
+            <p class="discount">34% OFF</p>
+            <p class="rating">⭐⭐⭐⭐☆ (4.1)</p>
+            <div class="product-buttons">
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+                <button class="buy-now">
+                    Buy Now
+                </button>
             </div>
-
-            <div class="product-card">
-                <img src="images/appliances.webp" alt="Laptop">
-                <h3>Laptop</h3>
-                <p>From ₹39,999</p>
-            </div>
-
-            <div class="product-card">
-                <img src="images/electronics.avif" alt="Headphones">
-                <h3>Headphones</h3>
-                <p>Up to 70% Off</p>
-            </div>
-
-            <div class="product-card">
-                <img src="images/mobiles.jpeg" alt="Smart Watch">
-                <h3>Smart Watch</h3>
-                <p>From ₹1,499</p>
-            </div>
-
-            <div class="product-card">
-                <img src="images/appliances.webp" alt="Television">
-                <h3>Television</h3>
-                <p>Up to 50% Off</p>
-            </div>
-
+            <div class="buy-quantity">
+                <button class="minus">
+                    -
+                </button>
+                <span class="qty">
+                    1
+                </span>
+                <button class="plus">+</button>
+           </div>     
+            <a href="product-details.html?id=4" class="view-details">
+                View Details →
+            </a>
+            
         </div>
 
-    </section>
-
-    <!-- Fashion -->
-
-    <section class="products">
-
-        <h2>Fashion Top Offers</h2>
-
-        <div class="product-container">
-
-            <div class="product-card">
-                <img src="images/fashion.jpg" alt="Men's Shoes">
-                <h3>Men's Shoes</h3>
-                <p>40% Off</p>
+        <div class="featured-card">
+            <img src="images/product6.png" alt="Laptop Backpack">
+            <h3>Laptop Backpack</h3>
+            <p class="price">₹899 <span>₹1,399</span></p>
+            <p class="discount">36% OFF</p>
+            <p class="rating">⭐⭐⭐⭐☆ (4.5)</p>
+            <div class="product-buttons">
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+                <button class="buy-now">
+                    Buy Now
+                </button>
             </div>
-
-            <div class="product-card">
-                <img src="images/fashion.jpg" alt="Women's Dress">
-                <h3>Women's Dress</h3>
-                <p>Min 50% Off</p>
+            <div class="buy-quantity">
+                <button class="minus">
+                    -
+                </button>
+                <span class="qty">
+                    1
+                </span>
+                <button class="plus">+</button>
             </div>
-
-            <div class="product-card">
-                <img src="images/fashion.jpg" alt="T-Shirts">
-                <h3>T-Shirts</h3>
-                <p>Starting ₹299</p>
-            </div>
-
-            <div class="product-card">
-                <img src="images/fashion.jpg" alt="Backpacks">
-                <h3>Backpacks</h3>
-                <p>From ₹499</p>
-            </div>
-
-            <div class="product-card">
-                <img src="images/fashion.jpg" alt="Watches">
-                <h3>Watches</h3>
-                <p>60% Off</p>
-            </div>
-
+            <a href="product-details.html?id=5" class="view-details">
+                View Details → 
+            </a>
+            
         </div>
 
-    </section>
-
-    <!-- Footer -->
-
-    <footer>
-
-        <div class="footer-box">
-            <h3>About</h3>
-            <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
-            <a href="#">Careers</a>
-            <a href="#">Flipkart Stories</a>
+        <div class="featured-card">
+            <img src="images/product7.png" alt="Wireless Earbuds">
+            <h3>Wireless Earbuds</h3>
+            <p class="price">₹1,499 <span>₹2,299</span></p>
+            <p class="discount">35% OFF</p>
+            <p class="rating">⭐⭐⭐⭐⭐ (4.8)</p>
+            <div class="product-buttons">
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+                <button class="buy-now">
+                    Buy Now
+                </button>
+            </div>
+            <div class="buy-quantity">
+                <button class="minus">
+                    -
+                </button>
+                <span class="qty">
+                    1
+                </span>
+                <button class="plus">+</button>
+            </div>
+            <a href="product-details.html?id=6" class="view-details">
+                View Details →
+            </a>
+            
         </div>
 
-        <div class="footer-box">
-            <h3>Help</h3>
-            <a href="#">Payments</a>
-            <a href="#">Shipping</a>
-            <a href="#">Cancellation</a>
-            <a href="#">FAQ</a>
+        <div class="featured-card">
+            <img src="images/product8.png" alt="Bluetooth Speaker">
+            <h3>Bluetooth Speaker</h3>
+            <p class="price">₹1,999 <span>₹2,999</span></p>
+            <p class="discount">33% OFF</p>
+            <p class="rating">⭐⭐⭐⭐☆ (4.4)</p>
+            <div class="product-buttons">
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+                <button class="buy-now">
+                    Buy Now
+                </button>
+            </div>
+            <div class="buy-quantity">
+                <button class="minus">
+                    -
+                </button>
+                <span class="qty">
+                    1
+                </span>
+                <button class="plus">+</button>
+            </div>
+                <a href="product-details.html?id=7" class="view-details">
+                   View Details → 
+                </a>
+            
         </div>
 
-        <div class="footer-box">
-            <h3>Policy</h3>
-            <a href="#">Return Policy</a>
-            <a href="#">Terms of Use</a>
-            <a href="#">Security</a>
-            <a href="#">Privacy</a>
-        </div>
+    </div>
 
-        <div class="footer-box">
-            <h3>Social</h3>
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
-            <a href="#">YouTube</a>
-        </div>
+</section>
+</main>
 
-        <p class="copyright">
-            © 2024 Flipkart Clone | All Rights Reserved
-        </p>
+<footer>
 
-    </footer>
+    <div class="footer-box">
+        <h3>About</h3>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Flipkart Stories</a>
+    </div>
 
-    <script src="js/script.js"></script>
+    <div class="footer-box">
+        <h3>Help</h3>
+        <a href="#">Payments</a>
+        <a href="#">Shipping</a>
+        <a href="#">Cancellation & Returns</a>
+        <a href="#">FAQ</a>
+    </div>
+
+    <div class="footer-box">
+        <h3>Policy</h3>
+        <a href="#">Return Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Security</a>
+        <a href="#">Privacy</a>
+    </div>
+
+    <div class="footer-box">
+        <h3>Social</h3>
+
+        <a href="#">
+            <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-twitter"></i> Twitter
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-youtube"></i> YouTube
+        </a>
+
+    </div>
+
+    <p class="copyright">
+        © 2025 Flipkart Clone | All Rights Reserved
+    </p>
+
+</footer>
+
+<div class="toast" id="toast">
+    Product added to cart!
+</div>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>

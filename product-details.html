@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Product Details - Flipkart</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-details.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="details-header">
+
+        <div class="logo">
+            <a href="index.html"> 
+                <h1>Flipkart</h1>
+            </a>
+        </div>
+
+        <div class="search-bar">
+
+            <input type="text"
+                placeholder="Search for products, brands and more">
+
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+        <div class="details-menu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="product-details">
+            <div class="product-left">
+
+                <div class="image-slider">
+
+                    <button class="img-nav-btn img-prev" id="prevBtn" aria-label="Previous product">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <img
+                        id="productImage"
+                        src="images/headphone1.png"
+                        class="detail-image"
+                        alt="Product Image">
+
+                    <button class="img-nav-btn img-next" id="nextBtn" aria-label="Next product">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+                <p class="category-position" id="categoryPosition">
+                    Product 1 of 4
+                </p>
+
+            </div>
+            <div class="product-right">
+
+                <p class="product-brand" id="productBrand">boAt</p>
+
+                <h1 id="productName">
+                    boAt Rockerz 450 Bluetooth Wireless Headphones
+                </h1>
+
+                <div class="rating-box">
+
+                    <span class="rating-badge" id="productRating">
+                        4.5 ★
+                    </span>
+
+                    <span id="productReviews">
+                        12,845 Ratings & 2,361 Reviews
+                    </span>
+
+                </div>
+
+                <div class="price-box">
+
+                    <h2 id="productPrice">₹2,499</h2>
+
+                    <span class="old-price" id="oldPrice">
+                        ₹3,999
+                    </span>
+
+                    <span class="offer" id="productOffer">
+                        37% OFF
+                    </span>
+
+                </div>
+
+                <p class="stock">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    In Stock
+
+                </p>
+
+                <h3>Description</h3>
+
+                <p id="productDescription">
+
+                    Experience premium sound quality with Bluetooth 5.3,
+                    40 Hours Battery Backup,
+                    Fast Charging,
+                    Built-in Microphone,
+                    Soft Ear Cushions,
+                    Foldable Design,
+                    and Deep Bass.
+
+                </p>
+
+                <h3>Highlights</h3>
+
+                <ul class="features" id="productFeatures">
+                    <li>Bluetooth Version 5.3</li>
+                    <li>40 Hours Battery Backup</li>
+                    <li>Fast Charging</li>
+                    <li>Built-in Microphone</li>
+                    <li>Lightweight Design</li>
+                    <li>One Year Warranty</li>
+
+                </ul>
+
+                <div class="quantity-box">
+                    <button class="minus">
+                        -
+                    </button>
+
+                    <span class="qty">
+                        1
+                    </span>
+
+                    <button class="plus">
+                        +
+                    </button>
+
+                </div>
+
+                <div class="action-buttons">
+
+                    <button class="add-cart">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Add to Cart
+
+                    </button>
+
+                     <button class="buy-now"><i class="fa-solid fa-bolt"></i>Buy Now</button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="customer-reviews">
+
+            <h2>Customer Reviews</h2>
+
+            <div class="reviews-list" id="reviewsList">
+
+                <div class="review-card">
+
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+
+                    <h3>Excellent Product</h3>
+
+                    <p>
+                        Amazing sound quality with deep bass.
+                        Battery backup is excellent and the headphones are
+                        very comfortable for long listening sessions.
+                    </p>
+
+                    <span>- Rahul Sharma</span>
+
+                </div>
+
+                <div class="review-card">
+
+                    <div class="review-rating">
+                        ★★★★☆
+                    </div>
+
+                    <h3>Worth Every Penny</h3>
+
+                    <p>
+                        Good build quality and premium design.
+                        Bluetooth connectivity is fast and stable.
+                    </p>
+
+                    <span>- Aman Verma</span>
+
+                </div>
+
+                <div class="review-card">
+
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+
+                    <h3>Highly Recommended</h3>
+
+                    <p>
+                        Excellent battery life.
+                        Perfect for gaming, movies and music.
+                    </p>
+
+                    <span>- Priya Singh</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="related-products">
+
+            <h2 id="relatedTitle">Related Products</h2>
+
+            <div class="related-grid" id="relatedGrid">
+
+                <div class="related-card">
+
+                    <img src="images/headphone1.png"
+                        alt="Headphone">
+
+                    <h3>boAt Rockerz 450</h3>
+
+                    <p>₹2,499</p>
+
+                </div>
+
+                <div class="related-card">
+
+                    <img src="images/headphone2.png"
+                        alt="Headphone">
+
+                    <h3>Sony WH-CH520</h3>
+
+                    <p>₹3,299</p>
+
+                </div>
+
+                <div class="related-card">
+
+                    <img src="images/headphone3.png"
+                        alt="Headphone">
+
+                    <h3>JBL Tune 510BT</h3>
+
+                    <p>₹2,999</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-box">
+
+            <h3>About</h3>
+
+            <a href="#">About Us</a>
+
+            <a href="#">Contact Us</a>
+
+            <a href="#">Careers</a>
+
+            <a href="#">Flipkart Stories</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Help</h3>
+
+            <a href="#">Payments</a>
+
+            <a href="#">Shipping</a>
+
+            <a href="#">Cancellation & Returns</a>
+
+            <a href="#">FAQ</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Policy</h3>
+
+            <a href="#">Return Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Privacy</a>
+
+            <a href="#">Security</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Follow Us</h3>
+
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+                Facebook
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+                Twitter
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+                YouTube
+            </a>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2025 Flipkart Clone | All Rights Reserved
+
+        </p>
+
+    </footer>
+
+    <div class="toast" id="toast">
+        Product added to cart!
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
