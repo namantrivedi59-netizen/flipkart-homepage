@@ -30,12 +30,13 @@
             Join Flipkart and start shopping.
         </p>
 
-        <form>
+        <form id="registerForm">
 
             <label>Full Name</label>
 
             <input
                 type="text"
+                id="fullName"
                 placeholder="Enter your full name"
                 required>
 
@@ -43,6 +44,7 @@
 
             <input
                 type="email"
+                id="regEmail"
                 placeholder="Enter your email"
                 required>
 
@@ -50,6 +52,7 @@
 
             <input
                 type="password"
+                id="regPassword"
                 placeholder="Create password"
                 required>
 
@@ -57,12 +60,15 @@
 
             <input
                 type="password"
+                id="confirmPassword"
                 placeholder="Confirm password"
                 required>
+                <p id="registerMessage"></p>
 
             <button
                 type="submit"
-                class="login-submit">
+                class="login-submit"
+                id="registerBtn">
 
                 Create Account
 
@@ -85,6 +91,7 @@
     </div>
 
 </div>
+<script src="js/script.js"></script>
 
 </body>
 

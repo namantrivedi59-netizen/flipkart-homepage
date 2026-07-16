@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart - Flipkart</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-details.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header class="details-header">
+
+        <div class="logo">
+            <a href="index.html">
+                <h1>Flipkart</h1>
+            </a>
+        </div>
+
+        <div class="search-bar">
+
+            <input type="text"
+                placeholder="Search for products, brands and more">
+
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+        <div class="details-menu">
+
+            <a href="index.html">Home</a>
+
+            <a href="login.html">Login</a>
+
+            <button class="cart-btn">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Cart
+
+                <span class="cart-count" id="cartCount">0</span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="product-details">
+
+            <div class="product-right" style="width:100%;">
+
+                <h1>Shopping Cart</h1>
+
+                <br>
+
+                <!-- Cart Items -->
+                <div id="cartItems">
+
+                    <div class="product-details"
+                        style="display:flex;align-items:center;gap:20px;margin-bottom:30px;border:1px solid #ddd;padding:20px;border-radius:10px;">
+
+                        <img
+                            src="images/headphone1.png"
+                            alt="Product"
+                            style="width:140px;"
+                            id="cartImage">
+
+                        <div style="flex:1;">
+
+                            <h2 id="cartProductName">
+                                Wireless Headphones
+                            </h2>
+
+                            <h3 style="color:#2874f0;">
+                                ₹<span id="cartPrice">2499</span>
+                            </h3>
+
+                            <br>
+
+                            <div class="quantity-box">
+
+                                <button id="minusBtn">-</button>
+
+                                <span class="qty" id="cartQty">1</span>
+
+                                <button id="plusBtn">+</button>
+
+                            </div>
+
+                            <br>
+
+                            <h3>
+
+                                Total :
+
+                                ₹<span id="productTotal">2499</span>
+
+                            </h3>
+
+                            <br>
+
+                            <button
+                                id="removeBtn"
+                                style="background:red;color:white;padding:10px 20px;border:none;border-radius:6px;cursor:pointer;">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                                Remove
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <br>
+
+                <h2>Order Summary</h2>
+
+                <br>
+
+                <div
+                    style="line-height:40px;font-size:20px;border:1px solid #ddd;padding:20px;border-radius:10px;">
+
+                    <p>
+
+                        <strong>Total Items :</strong>
+
+                        <span id="totalItems">1</span>
+
+                    </p>
+
+                    <p>
+
+                        <strong>Subtotal :</strong>
+
+                        ₹<span id="subTotal">2499</span>
+
+                    </p>
+
+                    <p>
+
+                        <strong>Delivery Charges :</strong>
+
+                        FREE
+
+                    </p>
+
+                    <hr>
+
+                    <h2>
+
+                        Grand Total :
+
+                        ₹<span id="grandTotal">2499</span>
+
+                    </h2>
+
+                </div>
+
+                <br><br>
+
+                <div class="action-buttons">
+
+                    <button
+                        class="add-cart"
+                        onclick="window.location.href='index.html'">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Continue Shopping
+
+                    </button>
+
+                    <button
+                        class="buy-now"
+                        onclick="window.location.href='order-summary.html'">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        Proceed to Checkout
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-box">
+
+            <h3>About</h3>
+
+            <a href="#">About Us</a>
+
+            <a href="#">Contact Us</a>
+
+            <a href="#">Careers</a>
+
+            <a href="#">Flipkart Stories</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Help</h3>
+
+            <a href="#">Payments</a>
+
+            <a href="#">Shipping</a>
+
+            <a href="#">Cancellation & Returns</a>
+
+            <a href="#">FAQ</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Policy</h3>
+
+            <a href="#">Return Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Privacy</a>
+
+            <a href="#">Security</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Follow Us</h3>
+
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+                Facebook
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+                Twitter
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+                YouTube
+            </a>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2025 Flipkart Clone | All Rights Reserved
+
+        </p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
