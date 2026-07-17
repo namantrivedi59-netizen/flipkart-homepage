@@ -1068,7 +1068,7 @@ function renderProductDetails() {
     const product = category.products[productIndex];
     const discount = computeDiscount(product.price, product.oldPrice);
 
-    document.title = `${product.name} - Flipkart`;
+    document.title = `${product.name} - UrbanCart`;
 
     const setText = (selector, text) => {
         const el = qs(selector);
@@ -1436,7 +1436,7 @@ if (registerForm) {
             password
         };
 
-        localStorage.setItem("flipkartUser", JSON.stringify(user));
+        localStorage.setItem("UrbanCartUser", JSON.stringify(user));
 
         message.style.color = "green";
         message.innerHTML = `Welcome, ${fullName}! Your account has been created successfully.`;
@@ -1514,7 +1514,7 @@ if (loginForm) {
             return;
         }
 
-        const user = JSON.parse(localStorage.getItem("flipkartUser"));
+        const user = JSON.parse(localStorage.getItem("UrbanCartUser"));
 
         if (!user) {
 
@@ -1562,7 +1562,7 @@ if (forgotForm) {
         const confirmPassword = document.getElementById("confirmNewPassword").value;
         const message = document.getElementById("forgotMessage");
 
-        const user = JSON.parse(localStorage.getItem("flipkartUser"));
+        const user = JSON.parse(localStorage.getItem("UrbanCarttUser"));
 
         if (!user) {
 
@@ -1590,7 +1590,7 @@ if (forgotForm) {
 
         user.password = newPassword;
 
-        localStorage.setItem("flipkartUser", JSON.stringify(user));
+        localStorage.setItem("UrbanCartUser", JSON.stringify(user));
 
         message.style.color = "green";
         message.innerHTML = "Password changed successfully! Redirecting to Login...";
